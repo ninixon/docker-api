@@ -33,6 +33,6 @@ $docker = new Docker(new DockerClient());
 $docker->getClient()
     ->setSocket();
 
-$containers = $docker->getContainerManager()->start('9ef17ed86099');
+$containers = $docker->getContainerManager()->findAll();
 
 print_r($containers);
